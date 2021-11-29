@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+    <div class="login-container" autocomplete="off" id="login">
+        <h3 class="title">Login</h3>
+        <button class="btn btn-login" onclick="login()">Login</button>
+        <input id="username" placeholder="username" type="text">
+        <input id="password" placeholder="password" type="password">
+    </div>
+
+
+    <p class="succeed">Succeed! wait 3 seconds</p>
+    <!-- <div class="data">
+        <h1>Contact form details</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+                    <input type="text" name="name" placeholder="Cafe name">
+                    <input type="text" name="city" placeholder="Cafe city">
+                    <button>Add Cafe</button>
+                </form>
+
+            <ul id="contact-list"></ul>
+
+            <ul id="test-list"></ul>
+
+        </div>
+    </div> -->
+    <p class="error">Wrong Password or id</p>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDk8n2YP1ylDaJluTjugU-oRxKtWF5f90A",
+            authDomain: "daan-3edc0.firebaseapp.com",
+            projectId: "daan-3edc0",
+            storageBucket: "daan-3edc0.appspot.com",
+            messagingSenderId: "437178869772",
+            appId: "1:437178869772:web:f93ab3441a6381f1a36629",
+            measurementId: "G-0VDRMK1244"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="../assets/js/contact.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./admin.js"></script>
+</body>
+
+</html>
